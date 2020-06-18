@@ -28,6 +28,7 @@ class ScoreboardVC: UIViewController {
             if let scoresData = defaults.object(forKey: "ScoreTable") as? NSData {
                 Scores = try (NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(scoresData as Data) as? [Score])
             }
+            Scores = Scores.sorted(by: {$0.date > $1.date })
         } catch {}
     }
     

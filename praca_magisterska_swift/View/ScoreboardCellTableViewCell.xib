@@ -23,7 +23,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 pkt" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Va7-Do-sgh">
-                        <rect key="frame" x="583" y="-19" width="184" height="158"/>
+                        <rect key="frame" x="583" y="-63" width="184" height="236"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="184" id="fbg-aY-GQ2"/>
                         </constraints>
@@ -33,12 +33,12 @@
                         <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <size key="shadowOffset" width="1" height="1"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12.02.2020" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jj-hY-gdg">
-                        <rect key="frame" x="64" y="-62" width="376" height="256"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="12.02.2020 15:44" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jj-hY-gdg">
+                        <rect key="frame" x="64" y="-62" width="476" height="256"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="376" id="7bh-ij-e0J"/>
+                            <constraint firstAttribute="width" constant="476" id="7bh-ij-e0J"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="73"/>
+                        <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="56"/>
                         <color key="textColor" red="0.43529411759999997" green="0.7725490196" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                         <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,10 +46,10 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Va7-Do-sgh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-30" id="BNN-HP-sBu"/>
-                    <constraint firstItem="8jj-hY-gdg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-73" id="f0J-OQ-sPM"/>
+                    <constraint firstItem="Va7-Do-sgh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-74" id="BNN-HP-sBu"/>
+                    <constraint firstItem="8jj-hY-gdg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-117" id="f0J-OQ-sPM"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Va7-Do-sgh" secondAttribute="trailing" constant="64" id="gXe-fc-C7D"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Va7-Do-sgh" secondAttribute="bottom" constant="-18" id="kA3-0w-2N4"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Va7-Do-sgh" secondAttribute="bottom" constant="-52" id="kA3-0w-2N4"/>
                     <constraint firstItem="8jj-hY-gdg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mM0-YA-X3K"/>
                     <constraint firstItem="8jj-hY-gdg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="44" id="x7b-hf-B6Z"/>
                 </constraints>
