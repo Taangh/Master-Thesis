@@ -53,7 +53,7 @@ class SettingsVC: UIViewController {
     @IBAction func pointsMinus(_ sender: UIButton) {
         AppSettings.MaxPoints-=1
         pointLabel.text = "\(AppSettings.MaxPoints) pkt"
-        if AppSettings.MaxPoints == 0 {
+        if AppSettings.MaxPoints == 1 {
             pointsMinutsButton.isEnabled = false
         }
         
