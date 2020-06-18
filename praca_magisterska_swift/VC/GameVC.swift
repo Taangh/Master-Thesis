@@ -42,6 +42,8 @@ class GameVC: UIViewController {
         backgroundView.backgroundColor = #colorLiteral(red: 0.4352941176, green: 0.7725490196, blue: 0.1725490196, alpha: 1)
         nameLabel.textColor = #colorLiteral(red: 0, green: 0.4431372549, blue: 0.003921568627, alpha: 1)
         
+        AppSettings.itemsArray.shuffle()
+        
         var chosenItems: [String] = []
         chosenItems = AppSettings.itemsArray.pickUniqueInValue(4)
         
