@@ -34,14 +34,14 @@ class WinVC: UIViewController {
             
             let defaults = UserDefaults.standard
             var scoreTable = [Score]()
-            if let scoresData = defaults.object(forKey: "ScoreTable") as? NSData {
+            if let scoresData = defaults.object(forKey: Constants.defaultsScoreBoard) as? NSData {
                 scoreTable = try (NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(scoresData as Data) as? [Score] ?? [
                     Score]())
             }
 
             scoreTable.append(Score(_date: Date(), _score: score))
             let encodedData: Data = try NSKeyedArchiver.archivedData(withRootObject: scoreTable, requiringSecureCoding: false)
-            defaults.set(encodedData, forKey: "ScoreTable")
+            defaults.set(encodedData, forKey: Constants.defaultsScoreBoard)
         } catch {}
 
     }

@@ -155,9 +155,9 @@ class GameVC: UIViewController {
     
     func goToNextSegue() {
         if AppSettings.GameSupervisedMode == AppSettings.GameSupervisedModeType.Supervised && success {
-            self.performSegue(withIdentifier: "ResultSupervisorSegue", sender: nil)
+            self.performSegue(withIdentifier: Constants.ResultSupervisorSegue, sender: nil)
         } else if AppSettings.GameSupervisedMode == AppSettings.GameSupervisedModeType.Unsupervised || !success {
-            self.performSegue(withIdentifier: "ResultNoSupervisorSegue", sender: nil)
+            self.performSegue(withIdentifier: Constants.ResultNoSupervisorSegue, sender: nil)
         }
     }
     

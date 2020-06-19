@@ -28,12 +28,12 @@ class ResultNoSupervisorVC: UIViewController {
         chosenItemLabel.text = chosenItem.capitalized
         
         if(AppSettings.GameMode == AppSettings.GameModeType.Images) {
-            chosenItemImage.image = UIImage(named: chosenItem + "_image")
+            chosenItemImage.image = UIImage(named: chosenItem + Constants.image)
         } else {
-            chosenItemImage.image = UIImage(named: chosenItem + "_photo")
+            chosenItemImage.image = UIImage(named: chosenItem + Constants.photo)
         }
         
-        successOrFailLabel.text = success ? "Dobrze!" : "Niestety źle!"
+        successOrFailLabel.text = success ? Constants.correct : Constants.incorrect
         
         if emotionsItemsMode == AppSettings.GameEmotionsItemsMode.Items {
             prepareItems()
@@ -55,13 +55,13 @@ class ResultNoSupervisorVC: UIViewController {
     }
     
     @IBAction func close(_ sender: UIButton) {
-        let closeAlert = UIAlertController(title: "Zakończ", message: "Czy na pewno chcesz zakończyć?", preferredStyle: UIAlertController.Style.alert)
+               let closeAlert = UIAlertController(title: Constants.finishGameAlertTitle, message: Constants.finishGameAlertMessage, preferredStyle: UIAlertController.Style.alert)
 
-        closeAlert.addAction(UIAlertAction(title: "Tak", style: .default, handler: { (action: UIAlertAction!) in
+        closeAlert.addAction(UIAlertAction(title: Constants.finishGameConfirmButtonText, style: .default, handler: { (action: UIAlertAction!) in
               self.view.window?.rootViewController?.dismiss(animated: false, completion: nil)
         }))
 
-        closeAlert.addAction(UIAlertAction(title: "Anuluj", style: .cancel, handler: { (action: UIAlertAction!) in
+        closeAlert.addAction(UIAlertAction(title: Constants.finishGameCancelButtonText, style: .cancel, handler: { (action: UIAlertAction!) in
         }))
 
         present(closeAlert, animated: true, completion: nil)
@@ -76,7 +76,7 @@ class ResultNoSupervisorVC: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if points >= AppSettings.MaxPoints {
-            self.performSegue(withIdentifier: "NoSupervisorWinSegue", sender: nil)
+            self.performSegue(withIdentifier: Constants.NoSupervisorWinSegue, sender: nil)
         } else {
             self.dismiss(animated: true, completion: nil)
         }

@@ -22,12 +22,12 @@ class ChooseCategoryVC: UIViewController {
         
     @IBAction func itemGameClick(_ sender: UIButton) {
         emotionsItemsMode = AppSettings.GameEmotionsItemsMode.Items
-        performSegue(withIdentifier: "ItemGameSegue", sender: nil)
+        performSegue(withIdentifier: Constants.ItemGameSegue, sender: nil)
     }
     
     @IBAction func emotionsGameClick(_ sender: UIButton) {
         emotionsItemsMode = AppSettings.GameEmotionsItemsMode.Emotions
-        performSegue(withIdentifier: "ItemGameSegue", sender: nil)
+        performSegue(withIdentifier: Constants.ItemGameSegue, sender: nil)
     }
     
     @IBAction func back(_ sender: UIButton) {

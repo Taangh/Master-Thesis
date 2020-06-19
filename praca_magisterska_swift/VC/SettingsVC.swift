@@ -29,7 +29,7 @@ class SettingsVC: UIViewController {
         }
         
         pointLabel.text = "\(AppSettings.MaxPoints) pkt"
-        modeLabel.text = AppSettings.GameMode == AppSettings.GameModeType.Images ? "Obrazki" : "Zdjęcia"
+        modeLabel.text = AppSettings.GameMode == AppSettings.GameModeType.Images ? Constants.imageLabel : Constants.photoLabel
     }
     
     @IBAction func switchButtonChanged (sender: UISwitch) {
@@ -39,7 +39,7 @@ class SettingsVC: UIViewController {
             AppSettings.GameSupervisedMode = AppSettings.GameSupervisedModeType.Unsupervised
         }
         
-        defaults.set(AppSettings.GameSupervisedMode.rawValue, forKey: "GameSupervisedMode")
+        defaults.set(AppSettings.GameSupervisedMode.rawValue, forKey: Constants.defaultsGameSupervisedMode)
     }
     
     @IBAction func pointsPlus(_ sender: UIButton) {
@@ -47,7 +47,7 @@ class SettingsVC: UIViewController {
         pointLabel.text = "\(AppSettings.MaxPoints) pkt"
         pointsMinutsButton.isEnabled = true
         
-        defaults.set(AppSettings.MaxPoints, forKey: "MaxPoints")
+        defaults.set(AppSettings.MaxPoints, forKey: Constants.defaultsMaxPoints)
     }
     
     @IBAction func pointsMinus(_ sender: UIButton) {
@@ -57,7 +57,7 @@ class SettingsVC: UIViewController {
             pointsMinutsButton.isEnabled = false
         }
         
-        defaults.set(AppSettings.MaxPoints, forKey: "MaxPoints")
+        defaults.set(AppSettings.MaxPoints, forKey: Constants.defaultsMaxPoints)
     }
     
     @IBAction func changeGameMode(_ sender: UIButton) {
@@ -66,9 +66,9 @@ class SettingsVC: UIViewController {
         } else if(AppSettings.GameMode == AppSettings.GameModeType.Photos) {
             AppSettings.GameMode = AppSettings.GameModeType.Images
         }
-        modeLabel.text = AppSettings.GameMode == AppSettings.GameModeType.Images ? "Obrazki" : "Zdjęcia"
+        modeLabel.text = AppSettings.GameMode == AppSettings.GameModeType.Images ? Constants.imageLabel : Constants.photoLabel
         
-        defaults.set(AppSettings.GameMode.rawValue, forKey: "GameMode")
+        defaults.set(AppSettings.GameMode.rawValue, forKey: Constants.defaultsGameMode)
     }
     
     @IBAction func back(_ sender: UIButton) {

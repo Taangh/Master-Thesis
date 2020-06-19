@@ -17,17 +17,17 @@ class MainMenuVC: UIViewController {
     }
     
     func setUpSettings() {
-        if(defaults.integer(forKey: "MaxPoints") != 0) {
-            AppSettings.MaxPoints = defaults.integer(forKey: "MaxPoints")
+        if(defaults.integer(forKey: Constants.defaultsMaxPoints) != 0) {
+            AppSettings.MaxPoints = defaults.integer(forKey: Constants.defaultsMaxPoints)
         }
 
-        if defaults.object(forKey: "GameMode") != nil {
-            let rawValue = defaults.integer(forKey: "GameMode")
+        if defaults.object(forKey: Constants.defaultsGameMode) != nil {
+            let rawValue = defaults.integer(forKey: Constants.defaultsGameMode)
             AppSettings.GameMode = AppSettings.GameModeType(rawValue: rawValue) ?? AppSettings.GameModeType.Images
         }
 
-        if defaults.object(forKey: "GameSupervisedMode") != nil {
-            let rawValue = defaults.integer(forKey: "GameSupervisedMode")
+        if defaults.object(forKey: Constants.defaultsGameSupervisedMode) != nil {
+            let rawValue = defaults.integer(forKey: Constants.defaultsGameSupervisedMode)
             AppSettings.GameSupervisedMode = AppSettings.GameSupervisedModeType(rawValue: rawValue) ?? AppSettings.GameSupervisedModeType.Supervised
         }
     }

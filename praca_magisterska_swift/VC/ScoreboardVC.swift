@@ -18,14 +18,14 @@ class ScoreboardVC: UIViewController {
         super.viewDidLoad()
         scoreboardTable.delegate = self
         scoreboardTable.dataSource = self
-        scoreboardTable.register(UINib(nibName: "ScoreboardCellTableViewCell", bundle: nil), forCellReuseIdentifier: ScoreboardCellTableViewCell.ID)
+        scoreboardTable.register(UINib(nibName: Constants.ScoreboardCellTableViewCell, bundle: nil), forCellReuseIdentifier: ScoreboardCellTableViewCell.ID)
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
         do {
             let defaults = UserDefaults.standard
-            if let scoresData = defaults.object(forKey: "ScoreTable") as? NSData {
+            if let scoresData = defaults.object(forKey: Constants.defaultsScoreBoard) as? NSData {
                 Scores = try (NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(scoresData as Data) as? [Score])
                 Scores = Scores.sorted(by: {$0.date > $1.date })
             }

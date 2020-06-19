@@ -13,7 +13,7 @@ class ScoreboardCellTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     
-    static let ID = "ScoreboardCellTableViewCell"
+    static let ID = Constants.ScoreboardCellTableViewCell
     
     func updateCell(_date: Date, _score: Int) {
         let dateFormatter = DateFormatter()
