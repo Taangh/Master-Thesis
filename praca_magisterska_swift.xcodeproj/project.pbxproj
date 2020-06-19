@@ -25,6 +25,7 @@
 		7C9C90ED248D21DF006D4BCA /* ScoreboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9C90EC248D21DF006D4BCA /* ScoreboardVC.swift */; };
 		7C9D42DE247EEA16005B25FF /* impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C9D42DD247EEA16005B25FF /* impact.ttf */; };
 		7C9D42E0247EEE03005B25FF /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9D42DF247EEE03005B25FF /* GameVC.swift */; };
+		7CA0F1E0249D08C500E3ECA7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA0F1DF249D08C500E3ECA7 /* Constants.swift */; };
 		7CDE2D9F247BFCD6008E9536 /* ChooseCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE2D9E247BFCD6008E9536 /* ChooseCategoryVC.swift */; };
 		7CFF87CF24893C4800AD57DE /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFF87CE24893C4800AD57DE /* AppSettings.swift */; };
 		7CFF87D1248940B600AD57DE /* WinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFF87D0248940B600AD57DE /* WinVC.swift */; };
@@ -72,6 +73,7 @@
 		7C9C90EC248D21DF006D4BCA /* ScoreboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardVC.swift; sourceTree = "<group>"; };
 		7C9D42DD247EEA16005B25FF /* impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = impact.ttf; sourceTree = "<group>"; };
 		7C9D42DF247EEE03005B25FF /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
+		7CA0F1DF249D08C500E3ECA7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7CDE2D9E247BFCD6008E9536 /* ChooseCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCategoryVC.swift; sourceTree = "<group>"; };
 		7CFF87CE24893C4800AD57DE /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		7CFF87D0248940B600AD57DE /* WinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinVC.swift; sourceTree = "<group>"; };
@@ -158,18 +160,17 @@
 		7C866C76247BE6450020B2C5 /* praca_magisterska_swift */ = {
 			isa = PBXGroup;
 			children = (
+				7CA0F1E2249D0A9400E3ECA7 /* Delegates */,
+				7CA0F1E1249D0A8300E3ECA7 /* Settings */,
 				7C227E8B24968F7100D77B72 /* Models */,
 				7C227E882496888700D77B72 /* Extensions */,
 				7C227E872496887E00D77B72 /* Fonts */,
 				7C227E822496883B00D77B72 /* View */,
 				7CDE2D9D247BF9CB008E9536 /* VC */,
-				7C866C77247BE6450020B2C5 /* AppDelegate.swift */,
-				7C866C79247BE6450020B2C5 /* SceneDelegate.swift */,
 				7C866C7D247BE6450020B2C5 /* Main.storyboard */,
 				7C866C80247BE64C0020B2C5 /* Assets.xcassets */,
 				7C866C82247BE64D0020B2C5 /* LaunchScreen.storyboard */,
 				7C866C85247BE64D0020B2C5 /* Info.plist */,
-				7CFF87CE24893C4800AD57DE /* AppSettings.swift */,
 			);
 			path = praca_magisterska_swift;
 			sourceTree = "<group>";
@@ -190,6 +191,24 @@
 				7C866C9B247BE6500020B2C5 /* Info.plist */,
 			);
 			path = praca_magisterska_swiftUITests;
+			sourceTree = "<group>";
+		};
+		7CA0F1E1249D0A8300E3ECA7 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				7CFF87CE24893C4800AD57DE /* AppSettings.swift */,
+				7CA0F1DF249D08C500E3ECA7 /* Constants.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		7CA0F1E2249D0A9400E3ECA7 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				7C866C77247BE6450020B2C5 /* AppDelegate.swift */,
+				7C866C79247BE6450020B2C5 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 		7CDE2D9D247BF9CB008E9536 /* VC */ = {
@@ -345,6 +364,7 @@
 				7C227E852496885800D77B72 /* ScoreboardCellTableViewCell.swift in Sources */,
 				7CDE2D9F247BFCD6008E9536 /* ChooseCategoryVC.swift in Sources */,
 				7C306A0024841D91000FF1ED /* ResultNoSupervisorVC.swift in Sources */,
+				7CA0F1E0249D08C500E3ECA7 /* Constants.swift in Sources */,
 				7C306A02248429D0000FF1ED /* ResultSupervisorVC.swift in Sources */,
 				7C9D42E0247EEE03005B25FF /* GameVC.swift in Sources */,
 				7CFF87D1248940B600AD57DE /* WinVC.swift in Sources */,

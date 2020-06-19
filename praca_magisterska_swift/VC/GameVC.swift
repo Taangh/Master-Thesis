@@ -31,10 +31,13 @@ class GameVC: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        if emotionsItemsMode == AppSettings.GameEmotionsItemsMode.Items {
-            prepareItems()
-        } else if emotionsItemsMode == AppSettings.GameEmotionsItemsMode.Emotions {
-            prepareEmotions()
+        switch emotionsItemsMode {
+            case AppSettings.GameEmotionsItemsMode.Items:
+                prepareItems()
+                break
+            case AppSettings.GameEmotionsItemsMode.Emotions:
+                prepareEmotions()
+                break
         }
     }
     
@@ -46,24 +49,24 @@ class GameVC: UIViewController {
         
         var chosenItems: [String] = []
         chosenItems = AppSettings.itemsArray.pickUniqueInValue(4)
-        
+                
         nameLabel.text = chosenItems[0].capitalized
         correctAnswer = chosenItems[0]
         
         chosenItems.shuffle()
         
-        var correctAnswerToCheck = ""
+        var correctAnswerToCheck = String()
         
         if(AppSettings.GameMode == AppSettings.GameModeType.Images) {
             for i in 0...3 {
-                chosenItems[i] += "_image"
+                chosenItems[i] += Constants.image
             }
-            correctAnswerToCheck = correctAnswer + "_image"
+            correctAnswerToCheck = correctAnswer + Constants.image
         } else if(AppSettings.GameMode == AppSettings.GameModeType.Photos) {
             for i in 0...3 {
-                chosenItems[i] += "_photo"
+                chosenItems[i] += Constants.photo
             }
-            correctAnswerToCheck = correctAnswer + "_photo"
+            correctAnswerToCheck = correctAnswer + Constants.photo
         }
         
         button_1.setBackgroundImage(UIImage(named: chosenItems[0]), for: .normal)
@@ -120,13 +123,13 @@ class GameVC: UIViewController {
     }
 
     @IBAction func close(_ sender: UIButton) {
-        let closeAlert = UIAlertController(title: "Zakończ", message: "Czy na pewno chcesz zakończyć?", preferredStyle: UIAlertController.Style.alert)
+        let closeAlert = UIAlertController(title: Constants.finishGameAlertTitle, message: Constants.finishGameAlertMessage, preferredStyle: UIAlertController.Style.alert)
 
-        closeAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+        closeAlert.addAction(UIAlertAction(title: Constants.finishGameConfirmButtonText, style: .default, handler: { (action: UIAlertAction!) in
               self.view.window?.rootViewController?.dismiss(animated: false, completion: nil)
         }))
 
-        closeAlert.addAction(UIAlertAction(title: "Anuluj", style: .cancel, handler: { (action: UIAlertAction!) in
+        closeAlert.addAction(UIAlertAction(title: Constants.finishGameCancelButtonText, style: .cancel, handler: { (action: UIAlertAction!) in
         }))
 
         present(closeAlert, animated: true, completion: nil)
