@@ -16,6 +16,7 @@ class ResultSupervisorVC: UIViewController {
     @IBOutlet weak var backgroundView: UIView!
     var emotionsItemsMode = AppSettings.GameEmotionsItemsMode.Items
     var chosenItem: String!
+    var chosenItemImageName: String!
     var success: Bool!
     var points: Int!
     var score: Int!
@@ -26,12 +27,8 @@ class ResultSupervisorVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         chosenItemLabel.text = chosenItem.capitalized
-        
-        if(AppSettings.GameMode == AppSettings.GameModeType.Images) {
-            chosenItemImage.image = UIImage(named: chosenItem + Constants.image)
-        } else {
-            chosenItemImage.image = UIImage(named: chosenItem + Constants.photo)
-        }
+        chosenItemImage.image = UIImage(named: chosenItemImageName)
+
         
         if emotionsItemsMode == AppSettings.GameEmotionsItemsMode.Items {
             prepareItems()
@@ -59,8 +56,8 @@ class ResultSupervisorVC: UIViewController {
         backgroundView.backgroundColor = #colorLiteral(red: 0, green: 0.5054124594, blue: 0, alpha: 1)
         chosenItemLabel.textColor = #colorLiteral(red: 0.4352941176, green: 0.7725490196, blue: 0.1725490196, alpha: 1)
         successOrFailLabel.textColor = #colorLiteral(red: 0.4352941176, green: 0.7725490196, blue: 0.1725490196, alpha: 1)
-        
-        successOrFailLabel.text = Constants.correctItemActionLabel + chosenItem!
+
+        successOrFailLabel.text = Constants.correctEmotionActionLabel + chosenItem!
     }
     
     @IBAction func correctlyPerformedAction(_ sender: UIButton) {

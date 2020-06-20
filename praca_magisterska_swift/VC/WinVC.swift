@@ -13,7 +13,7 @@ class WinVC: UIViewController {
     @IBOutlet weak var winLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     
-    var emotionsItemsMode = AppSettings.GameEmotionsItemsMode.Items
+    var emotionsItemsMode: AppSettings.GameEmotionsItemsMode!
     var score: Int!
 
     override func viewDidLoad() {
@@ -49,11 +49,13 @@ class WinVC: UIViewController {
     func prepareItems() {
         backgroundView.backgroundColor = #colorLiteral(red: 0.4352941176, green: 0.7725490196, blue: 0.1725490196, alpha: 1)
         winLabel.textColor = #colorLiteral(red: 0, green: 0.5054124594, blue: 0, alpha: 1)
+        scoreLabel.textColor = #colorLiteral(red: 0, green: 0.5054124594, blue: 0, alpha: 1)
     }
     
     func prepareEmotions() {
         backgroundView.backgroundColor = #colorLiteral(red: 0, green: 0.5054124594, blue: 0, alpha: 1)
         winLabel.textColor = #colorLiteral(red: 0.4352941176, green: 0.7725490196, blue: 0.1725490196, alpha: 1)
+        scoreLabel.textColor = #colorLiteral(red: 0.4352941176, green: 0.7725490196, blue: 0.1725490196, alpha: 1)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -29,5 +29,7 @@ struct AppSettings {
     }
     
     static var itemsArray: [String] = ["jabłko", "kalkulator", "zeszyt", "piłka", "książka", "samochód", "długopis", "łyżka", "wieszak", "plecak", "skarpetka", "but", "gumka", "linijka", "grzechotka", "klocek", "pluszak" , "piórnik", "kartka", "ołówek" , "cymbałki", "miotła", "balon", "banan", "ogórek", "skakanka", "klucz", "czapka", "samolot", "pędzel"]
+    
+    static var emotionsArray: [String] = ["zdziwienie", "radość", "smutek", "strach", "obrzydzenie", "złość", "znudzenie"]
 
 }

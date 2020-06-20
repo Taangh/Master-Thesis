@@ -20,6 +20,7 @@ class GameVC: UIViewController {
     var emotionsArray: [String] = ["radość", "zdziwienie", "smutek", "strach"]
     var emotionsItemsMode = AppSettings.GameEmotionsItemsMode.Items
     var correctAnswer: String!
+    var correctAnswerImageName: String!
     var success: Bool!
     var points: Int!
     var score: Int!
@@ -62,12 +63,15 @@ class GameVC: UIViewController {
                 chosenItems[i] += Constants.image
             }
             correctAnswerToCheck = correctAnswer + Constants.image
+            correctAnswerImageName = correctAnswer + Constants.image
         } else if(AppSettings.GameMode == AppSettings.GameModeType.Photos) {
             for i in 0...3 {
                 chosenItems[i] += Constants.photo
             }
             correctAnswerToCheck = correctAnswer + Constants.photo
+            correctAnswerImageName = correctAnswer + Constants.photo
         }
+        
         
         button_1.setBackgroundImage(UIImage(named: chosenItems[0]), for: .normal)
         button_1.tag = chosenItems[0] == correctAnswerToCheck ? 0 : Int.random(in: 1..<3)
@@ -83,22 +87,49 @@ class GameVC: UIViewController {
         backgroundView.backgroundColor = #colorLiteral(red: 0, green: 0.4431372549, blue: 0.003921568627, alpha: 1)
         nameLabel.textColor = #colorLiteral(red: 0.4352941176, green: 0.7725490196, blue: 0.1725490196, alpha: 1)
         
-        var chosenEmotions: [String] = []
-        chosenEmotions = emotionsArray.pickUniqueInValue(4)
+        AppSettings.itemsArray.shuffle()
         
+        var chosenEmotions: [String] = []
+        chosenEmotions = AppSettings.emotionsArray.pickUniqueInValue(4)
+                
         nameLabel.text = chosenEmotions[0].capitalized
         correctAnswer = chosenEmotions[0]
         
         chosenEmotions.shuffle()
-
-        button_1.setImage(UIImage(named: chosenEmotions[0]), for: .normal)
-        button_1.tag = chosenEmotions[0] == correctAnswer ? 0 : Int.random(in: 1..<3)
-        button_2.setImage(UIImage(named: chosenEmotions[1]), for: .normal)
-        button_2.tag = chosenEmotions[1] == correctAnswer ? 0 : Int.random(in: 1..<3)
-        button_3.setImage(UIImage(named: chosenEmotions[2]), for: .normal)
-        button_3.tag = chosenEmotions[2] == correctAnswer ? 0 : Int.random(in: 1..<3)
-        button_4.setImage(UIImage(named: chosenEmotions[3]), for: .normal)
-        button_4.tag = chosenEmotions[3] == correctAnswer ? 0 : Int.random(in: 1..<3)
+        
+        var correctAnswerToCheck = String()
+        
+        if(AppSettings.GameMode == AppSettings.GameModeType.Images) {
+            for i in 0...3 {
+                chosenEmotions[i] += Constants.image
+            }
+            correctAnswerToCheck = correctAnswer + Constants.image
+        } else if(AppSettings.GameMode == AppSettings.GameModeType.Photos) {
+            for i in 0...3 {
+                chosenEmotions[i] += Constants.photo
+            }
+            correctAnswerToCheck = correctAnswer + Constants.photo
+        }
+        
+        
+        var chosenImages: [String] = []
+        
+        for i in 0...3 {
+            let imageName = "\(chosenEmotions[i])-\(Int.random(in: 0...3))"
+            chosenImages.append(imageName)
+            if(correctAnswerToCheck == chosenEmotions[i]) {
+                correctAnswerImageName = imageName
+            }
+        }
+                        
+        button_1.setBackgroundImage(UIImage(named: chosenImages[0]), for: .normal)
+        button_1.tag = chosenEmotions[0] == correctAnswerToCheck ? 0 : Int.random(in: 1..<3)
+        button_2.setBackgroundImage(UIImage(named: chosenImages[1]), for: .normal)
+        button_2.tag = chosenEmotions[1] == correctAnswerToCheck ? 0 : Int.random(in: 1..<3)
+        button_3.setBackgroundImage(UIImage(named: chosenImages[2]), for: .normal)
+        button_3.tag = chosenEmotions[2] == correctAnswerToCheck ? 0 : Int.random(in: 1..<3)
+        button_4.setBackgroundImage(UIImage(named: chosenImages[3]), for: .normal)
+        button_4.tag = chosenEmotions[3] == correctAnswerToCheck ? 0 : Int.random(in: 1..<3)
 
     }
     
@@ -139,12 +170,14 @@ class GameVC: UIViewController {
         points += 1
         if let target = segue.destination as? ResultNoSupervisorVC {
             score = success ? score + 1 : score
+            target.chosenItemImageName = correctAnswerImageName
             target.chosenItem = correctAnswer
             target.score = score
             target.success = success
             target.points = points
             target.emotionsItemsMode = emotionsItemsMode
         } else if let target = segue.destination as? ResultSupervisorVC{
+            target.chosenItemImageName = correctAnswerImageName
             target.chosenItem = correctAnswer
             target.success = success
             target.points = points

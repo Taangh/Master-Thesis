@@ -41,16 +41,19 @@
       "size" : "60x60"
     },
     {
+      "filename" : "Zasób 5@3x-20.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "20x20"
     },
     {
+      "filename" : "Zasób 5@3x-20@2x.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
+      "filename" : "Zasób 5@3x-29.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "29x29"
@@ -61,6 +64,7 @@
       "size" : "29x29"
     },
     {
+      "filename" : "Zasób 5@3x-40.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "40x40"
@@ -71,21 +75,25 @@
       "size" : "40x40"
     },
     {
+      "filename" : "Zasób 5@3x-76.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "76x76"
     },
     {
+      "filename" : "Zasób 5@3x-76@2x.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "76x76"
     },
     {
+      "filename" : "Zasób 5@3x-83.5@2x.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "83.5x83.5"
     },
     {
+      "filename" : "Zasób 5@3x-1024.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"

@@ -14,8 +14,9 @@ class ResultNoSupervisorVC: UIViewController {
     @IBOutlet weak var chosenItemLabel: UILabel!
     @IBOutlet weak var successOrFailLabel: UILabel!
     @IBOutlet weak var backgroundView: UIView!
-    var emotionsItemsMode = AppSettings.GameEmotionsItemsMode.Items
+    var emotionsItemsMode: AppSettings.GameEmotionsItemsMode!
     var chosenItem: String!
+    var chosenItemImageName: String!
     var success: Bool!
     var points: Int!
     var score: Int!
@@ -26,13 +27,8 @@ class ResultNoSupervisorVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         chosenItemLabel.text = chosenItem.capitalized
-        
-        if(AppSettings.GameMode == AppSettings.GameModeType.Images) {
-            chosenItemImage.image = UIImage(named: chosenItem + Constants.image)
-        } else {
-            chosenItemImage.image = UIImage(named: chosenItem + Constants.photo)
-        }
-        
+        chosenItemImage.image = UIImage(named: chosenItemImageName)
+
         successOrFailLabel.text = success ? Constants.correct : Constants.incorrect
         
         if emotionsItemsMode == AppSettings.GameEmotionsItemsMode.Items {

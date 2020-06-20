@@ -253,7 +253,7 @@
                                                     <constraint firstAttribute="width" constant="200" id="DZP-Vx-nMe"/>
                                                     <constraint firstAttribute="height" constant="200" id="bEt-mQ-29q"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="klocek_image">
+                                                <state key="normal">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                                 </state>
                                                 <connections>
