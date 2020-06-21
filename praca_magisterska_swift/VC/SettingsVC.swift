@@ -74,4 +74,8 @@ class SettingsVC: UIViewController {
     @IBAction func back(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }

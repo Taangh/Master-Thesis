@@ -81,13 +81,14 @@ class GameVC: UIViewController {
         button_3.tag = chosenItems[2] == correctAnswerToCheck ? 0 : Int.random(in: 1..<3)
         button_4.setBackgroundImage(UIImage(named: chosenItems[3]), for: .normal)
         button_4.tag = chosenItems[3] == correctAnswerToCheck ? 0 : Int.random(in: 1..<3)
+        
     }
     
     func prepareEmotions() {
         backgroundView.backgroundColor = #colorLiteral(red: 0, green: 0.4431372549, blue: 0.003921568627, alpha: 1)
         nameLabel.textColor = #colorLiteral(red: 0.4352941176, green: 0.7725490196, blue: 0.1725490196, alpha: 1)
         
-        AppSettings.itemsArray.shuffle()
+        AppSettings.emotionsArray.shuffle()
         
         var chosenEmotions: [String] = []
         chosenEmotions = AppSettings.emotionsArray.pickUniqueInValue(4)
