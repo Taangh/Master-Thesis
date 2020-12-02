@@ -1,0 +1,5 @@
+# Master-Thesis
+The main goal of this thesis was to design, develop, and investigate the impact of mobile games on children with autism and communication difficulties. The research on the literature and currently available on the market solutions was performed. The requirements and business rules were listed. The technologies and tools were investigated, and the most appropriate were chosen. The target platform was Apple iPad, and were written in Swift 5. The game containing two mini-games - recognizing items and emotions (in various modes) - was designed and implemented. The game offers to present images as illustrations or photos and to play in supervised mode (additional actions like pointing the object, in reality, or acting the chosen emotions are needed). The researches were conducted in the Krajowe Towarzystwo Autyzmu z Odziałem w Szczecinie - the facility for children with autism. The results were noted by supervisors in the prepared questionnaire and later analyzed. The game was evaluated, and possible improvements were suggested.
+
+[Read Master Thesis](W08_228202_2020_master_thesis.pdf)
+
