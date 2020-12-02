@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -16,7 +16,7 @@
         <!--Main MenuVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="MainMenuVC" customModule="praca_magisterska_swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="MainMenuVC" customModule="Praca_Magisterska" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,9 +39,8 @@
                                     <segue destination="9GN-hY-GrI" kind="presentation" modalTransitionStyle="crossDissolve" id="t9X-tQ-4gc"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GRAJ" translatesAutoresizingMaskIntoConstraints="NO" id="WIX-Vj-AG4">
-                                <rect key="frame" x="392" y="175" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GRAJ" translatesAutoresizingMaskIntoConstraints="NO" id="WIX-Vj-AG4">
+                                <rect key="frame" x="392" y="170" width="240" height="128"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTs-ZW-pSa">
                                 <rect key="frame" x="30" y="629" width="109" height="109"/>
@@ -68,19 +67,23 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="WIX-Vj-AG4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="392" id="1Aw-Fx-cpl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2eL-4q-htq" secondAttribute="trailing" constant="30" id="4u8-rQ-GQ5"/>
                             <constraint firstAttribute="bottom" secondItem="RdE-Ez-eQK" secondAttribute="bottom" id="8Fg-ln-lWs"/>
                             <constraint firstItem="RdE-Ez-eQK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DmP-Xf-G2e"/>
+                            <constraint firstItem="WIX-Vj-AG4" firstAttribute="centerX" secondItem="1VF-3m-pAC" secondAttribute="centerX" id="GE7-pf-eBG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2eL-4q-htq" secondAttribute="bottom" constant="30" id="Hnd-WJ-EKn"/>
                             <constraint firstAttribute="trailing" secondItem="pxG-fJ-Wxh" secondAttribute="trailing" id="MCC-Sn-R2A"/>
                             <constraint firstAttribute="trailing" secondItem="RdE-Ez-eQK" secondAttribute="trailing" id="QlB-1T-93G"/>
                             <constraint firstAttribute="bottom" secondItem="pxG-fJ-Wxh" secondAttribute="bottom" id="Te9-j4-aHa"/>
                             <constraint firstItem="RdE-Ez-eQK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="U41-SC-Ksu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WIX-Vj-AG4" secondAttribute="bottom" constant="470" id="U87-NB-1yQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DTs-ZW-pSa" secondAttribute="bottom" constant="30" id="WxE-eS-BgK"/>
                             <constraint firstItem="pxG-fJ-Wxh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YUD-Cm-1AC"/>
                             <constraint firstItem="1VF-3m-pAC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="czx-fx-W8d"/>
                             <constraint firstItem="1VF-3m-pAC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eMW-pS-0hm"/>
                             <constraint firstItem="DTs-ZW-pSa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="fBF-FQ-8IE"/>
+                            <constraint firstItem="WIX-Vj-AG4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="170" id="oDf-Hs-4Cw"/>
                             <constraint firstItem="pxG-fJ-Wxh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pVn-mj-zpE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -93,7 +96,7 @@
         <!--Choose CategoryVC-->
         <scene sceneID="LQF-kl-8aU">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Hag-ZU-vZe" customClass="ChooseCategoryVC" customModule="praca_magisterska_swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Hag-ZU-vZe" customClass="ChooseCategoryVC" customModule="Praca_Magisterska" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LFX-Ny-Viw">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -208,7 +211,7 @@
         <!--GameVC-->
         <scene sceneID="QaE-fi-7Kn">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="gt0-Vq-7Oa" customClass="GameVC" customModule="praca_magisterska_swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="gt0-Vq-7Oa" customClass="GameVC" customModule="Praca_Magisterska" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P4L-8E-cxU">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -342,7 +345,7 @@
         <!--Result No SupervisorVC-->
         <scene sceneID="qwI-dX-ICD">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="O92-qS-VJh" customClass="ResultNoSupervisorVC" customModule="praca_magisterska_swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="O92-qS-VJh" customClass="ResultNoSupervisorVC" customModule="Praca_Magisterska" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ar5-dL-6zZ">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -433,7 +436,7 @@
         <!--Result SupervisorVC-->
         <scene sceneID="DFJ-dB-qYG">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="jIo-2g-pHg" customClass="ResultSupervisorVC" customModule="praca_magisterska_swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="jIo-2g-pHg" customClass="ResultSupervisorVC" customModule="Praca_Magisterska" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1l9-Vt-bFF">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -553,7 +556,7 @@
         <!--WinVC-->
         <scene sceneID="8sN-Ml-LUf">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="xdw-PG-oIF" customClass="WinVC" customModule="praca_magisterska_swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="xdw-PG-oIF" customClass="WinVC" customModule="Praca_Magisterska" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jjd-79-eTN">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -627,7 +630,7 @@
         <!--SettingsVC-->
         <scene sceneID="8vm-si-DJr">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="9GN-hY-GrI" customClass="SettingsVC" customModule="praca_magisterska_swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="9GN-hY-GrI" customClass="SettingsVC" customModule="Praca_Magisterska" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aL7-d0-760">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -816,7 +819,7 @@
         <!--ScoreboardVC-->
         <scene sceneID="YFy-jf-4Oz">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="YEN-iu-8hP" customClass="ScoreboardVC" customModule="praca_magisterska_swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="YEN-iu-8hP" customClass="ScoreboardVC" customModule="Praca_Magisterska" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7gH-Ge-7wo">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -894,7 +897,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kLk-vm-WuS"/>
+        <segue reference="LJ1-ga-0Np"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="EMOCJE" width="500" height="155"/>
